@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
+import jwtDecode from "jwt-decode";
 
 const BASE_URL =
   "https://twitter-api-sigmaschooltech.sigma-school-full-stack.repl.co";
