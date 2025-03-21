@@ -1,5 +1,5 @@
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
+import jwtDecode from "jwt-decode";
 import { useEffect, useState } from "react";
 import { Button, Col, Image, Row } from "react-bootstrap";
 

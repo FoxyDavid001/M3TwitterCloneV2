@@ -1,4 +1,4 @@
-import { jwtDecode } from "jwt-decode";
+import jwtDecode from "jwt-decode";
 import { useEffect } from "react";
 import { Button, Col, Image, Nav, Row, Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
