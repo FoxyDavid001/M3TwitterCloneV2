@@ -5,11 +5,6 @@ import { useState } from "react";
 
 export default function ProfileSideBar({ handleLogout }) {
   const [show, setShow] = useState(false);
-  const [showChatbot, setShowChatbot] = useState(false);
-
-  const handleCloseChatbot = () => setShowChatbot(false);
-  const handleShowChatbot = () => setShowChatbot(true);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -28,7 +23,6 @@ export default function ProfileSideBar({ handleLogout }) {
       <IconButton className="bi bi-bookmark" text="Bookmarks" />
       <IconButton className="bi bi-patch-check" text="Verified" />
       <IconButton className="bi bi-person" text="Profile" />
-      <IconButton className="bi bi-filter-circle" text="Chatbot" onClick={handleShowChatbot} />
       <IconButton
         className="bi bi-door-closed"
         text="Logout"
@@ -38,7 +32,6 @@ export default function ProfileSideBar({ handleLogout }) {
         Tweet
       </Button>
       <NewPostModal show={show} handleClose={handleClose} />
-      {/* <ChatbotModal show={showChatbot} handleClose={handleCloseChatbot} /> */}
     </Col>
   );
 }

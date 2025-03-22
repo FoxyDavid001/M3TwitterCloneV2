@@ -9,10 +9,13 @@ export default function NewPostModal({ show, handleClose }) {
   const [file, setFile] = useState(null);
   const dispatch = useDispatch();
   const { currentUser } = useContext(AuthContext);
-  const userId = currentUser.uid;
+  let userId;
+  if (currentUser) {
+    userId = currentUser.id;
+  }
 
   const handleSave = () => {
-    dispatch(savePost({userId, postContent, file}));
+    dispatch(savePost({ userId, postContent, file }));
     handleClose();
     setPostContent("");
     setFile(null);
@@ -20,9 +23,8 @@ export default function NewPostModal({ show, handleClose }) {
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
-  }
+  };
 
-  
   return (
     <>
       <Modal show={show} onHide={handleClose}>

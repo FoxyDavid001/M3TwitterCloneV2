@@ -10,9 +10,14 @@ export default function ProfilePostCard({ post }) {
   const [likes, setLikes] = useState(post.likes || []);
   const dispatch = useDispatch();
   const { currentUser } = useContext(AuthContext);
-  const userId = currentUser.uid;
 
-  const isLiked = likes.includes(userId);
+  let userId;
+  let isLiked = false;
+    
+  if (currentUser){
+    userId = currentUser.uid;
+    isLiked = likes.includes(userId);
+  }
 
   const pic = "https://pbs.twimg.com/profile_images/1587405892437221376/h167Jlb2_400x400.jpg";
 
