@@ -12,7 +12,7 @@ export default function ProfileSideBar({ handleLogout }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
   return (
     <Col
       sm={2}
@@ -28,7 +28,7 @@ export default function ProfileSideBar({ handleLogout }) {
       <IconButton className="bi bi-bookmark" text="Bookmarks" />
       <IconButton className="bi bi-patch-check" text="Verified" />
       <IconButton className="bi bi-person" text="Profile" />
-      <IconButton className="bi bi-filter-circle" text="Chatbot" onClick={handleShowChatbot}/>
+      <IconButton className="bi bi-filter-circle" text="Chatbot" onClick={handleShowChatbot} />
       <IconButton
         className="bi bi-door-closed"
         text="Logout"
@@ -38,7 +38,7 @@ export default function ProfileSideBar({ handleLogout }) {
         Tweet
       </Button>
       <NewPostModal show={show} handleClose={handleClose} />
-      <ChatbotModal show={showChatbot} handleClose={handleCloseChatbot} />
+      {/* <ChatbotModal show={showChatbot} handleClose={handleCloseChatbot} /> */}
     </Col>
   );
 }
